@@ -300,8 +300,7 @@ footer {
 	}
 }
 
-@media screen and (max-width: 800px){
-	
+@media screen and (max-width: 800px){	
 	header{
 		height: 50px;
 	}
@@ -356,7 +355,6 @@ footer {
 }
 
 @media screen and (max-width: 970px){
-
 	.features{
 		height: auto;
 	}
@@ -424,8 +422,7 @@ footer {
 	}
 }
 
-@media screen and (max-width: 500px) {
-	
+@media screen and (max-width: 500px) {	
 	header{
 		height: 40px;
 	}
@@ -475,12 +472,6 @@ footer {
 		display: none;
 	}
 
-
-
-
-
-
-
 	.feature-article{
 		padding-top: 20px;
 	}
@@ -510,7 +501,6 @@ footer {
 		max-width: 100%;
     	width: auto;
 	}	
-
 
 	.menu-features{
 		margin-top: 20px;
@@ -571,5 +561,4 @@ footer {
 	.footer-copyright{
 		font-size: 10px;
 	}
-
 }
