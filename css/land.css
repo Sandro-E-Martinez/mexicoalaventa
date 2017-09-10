@@ -203,7 +203,6 @@ footer {
 	margin-top: 147px;
 }
 
-
 .title-form {
 	color: #f7912b;
 	font-size: 32px;
@@ -268,16 +267,32 @@ footer {
 	margin-right: 13px;
 }
 
-.email-footer{
+.email-footer {
     position: absolute;
-    display: inline-block;
     left: 0;
 	margin: 15px 0px 0px 20px;	
 }
 
+.email-footer a{
+	display: flex;
+	justify-content: center;	
+}
+
+.email-footer span{
+	padding-top: 3px;
+}
+
+.phone-footer a{
+	display: flex;
+	justify-content: center;	
+}
+
+.phone-footer span{
+	padding-top: 7px;
+}
+
 .phone-footer{
 	position: absolute;
-    display: inline-block;
 	margin: 9px 20px 0px 0px;	
     right: 0;
 }
@@ -560,5 +575,20 @@ footer {
 
 	.footer-copyright{
 		font-size: 10px;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	.cellphone-header {
+		font-size: 17px;
+		word-spacing: 1.28px;
+		margin-right: 3px;
+	}
+	
+	.form form input, textarea{
+		font-size: 12px;
+	}
+
+	.form form textarea{
 	}
 }
