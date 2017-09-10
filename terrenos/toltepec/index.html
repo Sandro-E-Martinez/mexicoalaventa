@@ -8,17 +8,30 @@
 			.cover{
 				background-image: url('images/cover.png');
 			}
+
+			@media screen and (max-width: 768px){
+				.cover{
+					background-image: url('images/cover768.png');
+				}				
+			}
+
+			@media screen and (max-width: 414px){
+				.cover{
+					background-image: url('images/cover414.png');
+				}				
+			}
+
 		</style>
 		<title>Terreno a la Venta en San Andrés Totoltepec</title>
 	</head>
 	<body>
 		<header id="header" class="wrap">
 			<figure id="CIBR" class="CIBRLogo">
-				<img src="../../images/CIBR.png" alt="Círculo Internaciona de Bienes Raíces" />	
+				<img data-src="../../images/CIBR.png" alt="Círculo Internaciona de Bienes Raíces" />	
 			</figure>
 			<figure id="whatsApp" class="whatsAppData">
 				<a href="tel:+5215559664446" class="cellphone-header">(55) 5966 4446</a>
-				<img class="whatsAppLogo"  src="../../images/whatsApp.png" alt="WhatsApp" />
+				<img class="whatsAppLogo"  data-src="../../images/whatsApp.png" alt="WhatsApp" />
 			</figure>
 		</header>
 
@@ -28,7 +41,7 @@
 			</h1>
  			<a class="callToActionButton" href="#form">Agenda YA tu cita!</a><br/>
 			<a id="nextWhite" href="#features">
-				<img class="nextWhiteImage" src="../../images/nextWhite.png" width="80" height="80" alt="siguiente" />
+				<img class="nextWhiteImage" data-src="../../images/nextWhite.png" width="80" height="80" alt="siguiente" />
 			</a>
 		</section>
 		
@@ -53,7 +66,7 @@
 
 			<div class="nextContainer">
 				<a class="nextGray" href="#form">
-					<img class="nextGrayImage" src="../../images/nextGray.png" width="80" height="80" alt="siguiente" />
+					<img class="nextGrayImage" data-src="../../images/nextGray.png" width="80" height="80" alt="siguiente" />
 				</a>
 			</div>
 		</section>
@@ -75,20 +88,26 @@
 			<div class="footer-data wrap">
 				<figure class="email-footer">
 					<a href="mailto:sandro.esteban@incubadorabienesraices.com">
-						<img src="../../images/mail25x19.png" width="25" height="19" alt="email"> 
+						<img data-src="../../images/mail25x19.png" width="25" height="19" alt="email"> 
 						<span>sandro.esteban@incubadorabienesraices.com
 						</span>
 					</a>
 				</figure>
 				<figure class="phone-footer">
 					<a href="tel:+5215559664446">
-						<img src="../../images/cel16x26.png" width="16" height="26" alt="celular"> 
+						<img data-src="../../images/cel16x26.png" width="16" height="26" alt="celular"> 
 						<span>Tel. (55) 5966 4446</span>
 					</a> 
 				</figure>				
 			</div>
 			<div class="footer-copyright">
 				Círculo Internacional de Bienes Raíces ®<br/>Copyright 2017 - CDMX a la Venta - All Rights Reserverd</div>
-		</footer>			
+		</footer>	
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js" ></script>
+		<script>
+			var bLazy = new Blazy({
+				selector: 'img'
+			});
+		</script>		
 	</body>
 </html>
