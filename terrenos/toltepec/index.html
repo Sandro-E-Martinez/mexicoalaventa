@@ -25,6 +25,7 @@
 		<title>Terreno a la Venta en San Andrés Totoltepec</title>
 	</head>
 	<body>
+	<script  src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 		<header id="header" class="wrap">
 			<figure id="CIBR" class="CIBRLogo">
 				<img data-src="../../images/CIBR.png" alt="Círculo Internaciona de Bienes Raíces" />	
@@ -76,11 +77,12 @@
 		<footer>
 			<section id="form" class="form">
 				<h2 class="title-form">¿Tienes dudas?<br/>Solicita más información o agenda YA una cita!</h2>
-				<form action="mailto:sandro.esteban@incubadorabienesraices.com?subject=asunto" enctype="text/plain">
+				<form id="buyerForm"  enctype="application/json">
 					<div class="inputs wrap">
-						<input class="name" type="text" required="" placeholder="Nombre" />
-						<input class="email" type="mail" required="" placeholder="Correo electrónico" />
-						<textarea class="comments" type="textarea" required=""  rows="3" placeholder="Escríbenos aquí tus comentarios y uno de nuestros asesores se pondrá en contacto contigo lo antes posible"></textarea> 
+						<input id="buyerName" class="name" type="text" required="" placeholder="Nombre" />
+						<input id="buyerMail" class="email" type="mail" required="" placeholder="Correo electrónico" />
+						<input id="buyerTel" class="phone" type="mail" required="" placeholder="Teléfono de contacto" />
+						<textarea id="buyerComment" class="comments" type="textarea" required=""  rows="3" placeholder="Escríbenos aquí tus comentarios y uno de nuestros asesores se pondrá en contacto contigo lo antes posible"></textarea> 
 					<button class="callToActionButton" >Enviar</button>
 					</div>
 				</form>				
@@ -104,10 +106,6 @@
 				Círculo Internacional de Bienes Raíces ®<br/>Copyright 2017 - CDMX a la Venta - All Rights Reserverd</div>
 		</footer>	
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js" ></script>
-		<script>
-			var bLazy = new Blazy({
-				selector: 'img'
-			});
-		</script>		
+		<script src="../../js/land.js"" ></script>
 	</body>
 </html>
