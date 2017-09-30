@@ -5,9 +5,24 @@ selector: 'img'
 
 $(function() {
 
+
+	$loader = $('<div class="loader">');
+
+	function endCleanForm(){
+		$loader.remove();
+		$('#body').removeClass('fondoTransparente');
+		$('#buyerName').val('');
+		$('#buyerMail').val('');
+		$('#buyerTel').val('');
+		$('#buyerComment').val('');
+	}
+
 	$('#buyerForm')
 		.submit(function(ev){
 			ev.preventDefault();
+
+			$('#body').addClass('fondoTransparente');
+			$loader.appendTo('body');
 
 			$.ajax({
 				type: 'POST',
@@ -22,11 +37,15 @@ $(function() {
 					"buyerComment": $('#buyerComment').val()
 				}),
 				success: function(result){
-					alert('mensaje enviado OK!!! ' + result);
+					endCleanForm();
+					alert('Tu solicitud fue enviado con éxito, uno de nuestros asesores se pondrá en contacto contigo lo antes posible.');
 				},
 				error: function(xhr,status,error) {
-					alert('ups!! algo salió mal: '+ error);
+					endCleanForm();
+					alert('No fue posible enviar tu solicitud. Puedes comunicarte con nosotos al 55 5966 4446.');
 				}
 			})
+
+
 		})
 })
