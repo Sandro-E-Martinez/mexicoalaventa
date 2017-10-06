@@ -6,18 +6,18 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<style>
 			.cover{
-				background-image: url('images/cover.png');
+				background-image: url('images/cover.jpg');
 			}
 
 			@media screen and (max-width: 768px){
 				.cover{
-					background-image: url('images/cover768.png');
+					background-image: url('images/cover768.jpg');
 				}				
 			}
 
 			@media screen and (max-width: 414px){
 				.cover{
-					background-image: url('images/cover414.png');
+					background-image: url('images/cover414.jpg');
 				}				
 			}
 
@@ -28,14 +28,16 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js" ></script>
 		<script  src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 		<script src="../../js/land.js"" ></script>
+		 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDm4FtyaV7lUteGjVTjSQPn_6hSWgGp3Js&callback=initMap"
+  type="text/javascript"></script>
 		<div id="body">
 			<header id="header" class="wrap">
 				<figure id="CIBR" class="CIBRLogo">
-					<img data-src="../../images/CIBR.png" alt="Círculo Internaciona de Bienes Raíces" />	
+					<img data-src="../../images/CIBR.jpg" alt="Círculo Internaciona de Bienes Raíces" />	
 				</figure>
 				<figure id="whatsApp" class="whatsAppData">
 					<a href="tel:+5215559664446" class="cellphone-header">(55) 5966 4446</a>
-					<img class="whatsAppLogo"  data-src="../../images/whatsApp.png" alt="WhatsApp" />
+					<img class="whatsAppLogo"  data-src="../../images/whatsApp.jpg" alt="WhatsApp" />
 				</figure>
 			</header>
 
@@ -50,29 +52,85 @@
 			</section>
 			
 			<section id="features" class="features wrap" >			
-				<article class="feature-article wrap">
-					<div id="#features">
-						<h2 class="title-features">Ubicación</h2>
-						<div class="info-features">
-							Ubicado a solo 5 minutos de la carretera federal México - Cuernavaca y a 10 minutos del centro de San Andrés Totoltepec en la delegeción Tlalpan al sur de la Ciudad de México	
+				<article id="feature-article" class="feature-article wrap">
+
+					<div class="location show">
+						<div class="content">
+							<h2 class="title-features">Ubicación</h2>
+							<div class="info-features">
+								Ubicado a solo 5 minutos de la carretera federal México - Cuernavaca y a 10 minutos del centro de San Andrés Totoltepec en la delegeción Tlalpan al sur de la Ciudad de México.
+							</div>							
+						</div>
+					
+						<div id="map"></div>
+					</div>
+
+					<div class="size hide">
+						<div class="content">
+							<h2 class="title-features">Tamaño</h2>
+							<div class="info-features">
+								Puedes obtener desde 400 m2 de terreno con opción a un mayor tamaño según tus necesidades.
+							</div>
 						</div>
 						<div class="imageContainer">					
-							<img class="image-features" src="images/googleMap.png" alt="mapa" />	
+							<img class="image-features" src="images/size.jpg" alt="mapa" />	
+						</div>							
+					</div>
+
+					<div class="feature hide">
+						<div class="content">
+							<h2 class="title-features">Características</h2>
+							<div class="info-features">
+								En la zona se cuenta con servicios de agua, luz y teléfono listos para ser contratados por el nuevo propietario.<br><br>A sus alredeores encontrarás la Iglesia, el Mercado Polpular y el Deportivo de San Andrés Totoltepec, escuelas, centros recreativos, comercios y más.
+							</div>
+						</div>
+
+						<div class="imageContainer">					
+							<img class="image-features" src="images/features.jpg" alt="mapa" />	
 						</div>
 					</div>
+
+					<div class="cost hide">
+						<div class="content">
+							<h2 class="title-features">Costo</h2>
+							<div class="info-features">
+								El precio es totalmente negociable, adquiere 400 m2 por $1,400,000 o bien $3,500 el metro cuadrado.<br><br>Conócelo y haz una oferta.
+							</div>
+						</div>
+
+						<div class="imageContainer">					
+							<img class="image-features" src="images/cost.jpg" alt="mapa" />	
+						</div>
+					</div>
+
+					<div class="pay hide">
+						<div class="content">
+							<h2 class="title-features">Formas de pago</h2>
+							<div class="info-features">
+								Aceptamos efectivo, depósito o transferencia bancaria y crédito hipotecario.<br><br>Si aún no cuentas con tu crédito, llámanos, nosotros te podemos ayudar.
+							</div>
+						</div>
+
+						<div class="imageContainer">					
+							<img class="image-features" src="images/pays.jpg" alt="mapa" />	
+						</div>
+					</div>
+
+
 					<div class="menu-features">
-					<ol>
-						<li><button class="activeButton">Ubicación</button></li>
-						<li><button>Tamaño</button></li>
-						<li><button>Características</button></li>
-						<li><button>Costo</button></li>
-						<li><button>Formas de pago</button></li>
-					</ol>					
+						<ol id="listFeatures">
+							<li><button data-feature="location" class="button-active">Ubicación</button></li>
+							<li><button data-feature="size">Tamaño</button></li>
+							<li><button data-feature="feature">Características</button></li>
+							<li><button data-feature="cost">Costo</button></li>
+							<li><button data-feature="pay">Formas de pago</button></li>
+						</ol>	
+					</div>				
 				</article>				
 
 				<div class="nextContainer">
 					<a class="nextGray" href="#form">
-						<img class="nextGrayImage" data-src="../../images/nextGray.png" width="80" height="80" alt="siguiente" />
+						<img class="nextGrayImage" data-src="../../images/nextGray.jpg" width="80" height="80" alt="siguiente" />
 					</a>
 				</div>
 			</section>

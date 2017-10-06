@@ -126,6 +126,30 @@ header figure, header figure a{
 	height: auto;
 }
 
+.location, .size, .feature, .cost, .pay{
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.hide{
+	display: none;
+}
+
+.show{
+	display: flex;
+}
+
+.content{
+	height: 150px;
+}
+
+#map {
+        width: 500px;
+        height: 450px;
+        background-color: grey;
+}
+
 .menu-features{
 	display: inline-block;
 	width: 470px;
@@ -157,21 +181,14 @@ header figure, header figure a{
     margin-bottom: 20px;
 } 
 
-.activeButton{
-	border: 3px solid #455a64;
-    color: #455a64;
-    font-weight: 300;
-} 
-
-.menu-features li button:hover{
+.menu-features li button:hover, 
+.menu-features li button.button-active{
 	border: 3px solid #f75111;
     color: #f75111;
 } 
 
-.image-features {
-	position: relative;
-	float: right;
-	top: -370px;
+.menu-features li button:focus {
+	outline:0;
 }
 
 .info-features{
@@ -429,9 +446,6 @@ footer {
 	}
 }
 
-
-
-
 @media screen and (max-width: 970px){
 	.features{
 		height: auto;
@@ -462,14 +476,9 @@ footer {
 		margin-bottom: 40px;
 	}
 
-	.image-features{
-		position: initial;
-		float: none;
+	.location, .size, .feature, .cost, .pay{
+		height: 800px;
 	}	
-
-	.imageContainer{
-		text-align: center;
-	}
 
 	.menu-features{
 		margin-top: 40px;
@@ -575,12 +584,23 @@ footer {
 		margin-bottom: 20px;
 	}
 
+	#map{
+		max-width: 100%;
+		height: 350px;
+	}
+
 	.image-features{
 		max-width: 100%;
-    	width: auto;
 	}	
 
+	.imageContainer, #map{
+		position: relative;
+		top: -120px;
+	}
+
 	.menu-features{
+		position: relative;
+		top: -250px;
 		margin-top: 20px;
 		display: flex;
 		justify-content: center;
@@ -647,11 +667,25 @@ footer {
 		word-spacing: 1.28px;
 		margin-right: 3px;
 	}
-	
+
+	content{
+		height: auto;
+	}	
+
 	.form form input, textarea{
 		font-size: 12px;
 	}
 
-	.form form textarea{
+	#map{
+		height: 290px;
 	}
+
+	.menu-features{
+		position: relative;
+		top: -300px;
+		margin-top: 20px;
+		display: flex;
+		justify-content: center;
+	}
+
 }
