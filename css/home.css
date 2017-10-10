@@ -281,6 +281,13 @@ footer {
 	padding-right: 20px;
 }
 
+.privacyAdvice{
+	float:left;
+	color: white;
+	font-size: 12px;
+
+}
+
 .footer-data {
 	height: 40px;
 	font-size: 16px;
@@ -379,7 +386,6 @@ footer {
     transform: rotate(360deg);
   }
 }
-
 
 .fondoTransparente
 {
