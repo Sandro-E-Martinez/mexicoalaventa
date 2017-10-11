@@ -2,25 +2,6 @@ var bLazy = new Blazy({
 	selector: 'img'
 });			
 
-function initMap() { 
-    var pos = {lat: 18.909837, lng: -99.185628};
-
-    var map = new google.maps.Map(document.getElementById('map'), {
-     	zoom: 15,
-     	center: pos          
-    });
-
-	var propertieCircle = new google.maps.Circle({
-            strokeColor: '#F75111',
-            strokeWeight: 1,
-            fillColor: '#F75111',
-            fillOpacity: 0.35,
-            map: map,
-            center: pos,
-            radius: 500
-      });
- }
-
 document.oncontextmenu = function() {
 	return false
 };
