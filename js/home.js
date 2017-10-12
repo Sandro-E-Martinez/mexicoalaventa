@@ -83,18 +83,21 @@ $(function() {
 				$slider.on('mouseenter', pauseSlider).on('mouseleave', startSlider);
 			} 
 
-			console.log('enviando evendo de imagenes ->'+ $newFeature);
-			ga('send', 'event', 'Image Galery', 'Click','Viendo pestaña '+ $newFeature);
+			ga('send', 'event', 'Image Galery', 'Click','Viendo imagenes');
 
 	});
 
 
 	$('#buyerForm')
 		.submit(function(ev){
-			ev.preventDefault();
 
-			console.log('enviando evento');
-			ga('send', 'event', 'Formulario', 'Submit','Formulario de solicitu de información del inmueble');
+			ga('send', {
+			  hitType: 'event',
+			  eventCategory: 'Submit',
+			  eventAction: 'formulario',
+			  eventLabel: 'Solicitud de Info'
+			});
+			ev.preventDefault();
 
 			$('#body').addClass('fondoTransparente');
 			$loader.appendTo('body');
