@@ -89,6 +89,8 @@ $(function() {
 		.submit(function(ev){
 			ev.preventDefault();
 
+			ga('send','event','Formulario', 'Submit','Formulario de solicitu de información del inmueble');
+
 			$('#body').addClass('fondoTransparente');
 			$loader.appendTo('body');
 
