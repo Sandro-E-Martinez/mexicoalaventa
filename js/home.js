@@ -82,6 +82,10 @@ $(function() {
 				startSlider();
 				$slider.on('mouseenter', pauseSlider).on('mouseleave', startSlider);
 			} 
+
+			console.log('enviando evendo de imagenes ->'+ $newFeature);
+			ga('send', 'event', 'Image Galery', 'Click','Viendo pestaña '+ $newFeature);
+
 	});
 
 
@@ -89,7 +93,8 @@ $(function() {
 		.submit(function(ev){
 			ev.preventDefault();
 
-			ga('send','event','Formulario', 'Submit','Formulario de solicitu de información del inmueble');
+			console.log('enviando evento');
+			ga('send', 'event', 'Formulario', 'Submit','Formulario de solicitu de información del inmueble');
 
 			$('#body').addClass('fondoTransparente');
 			$loader.appendTo('body');
